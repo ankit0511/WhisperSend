@@ -20,11 +20,11 @@ WhisperSend is a unique messaging app that allows users to send and receive rand
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS
+- **Frontend:** TypeScript, Next.js, Tailwind CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **AI Integration:** OpenAI/Gemini API (for AI-generated messages)
-- **Authentication:** JWT & OAuth (Optional for user identity management)
+- **Authentication:** NextAuth & OAuth  (Optional for user identity management)
 
 ---
 
@@ -33,7 +33,7 @@ WhisperSend is a unique messaging app that allows users to send and receive rand
 Clone the repository and install dependencies:
 
 ```bash
- git clone https://github.com/yourusername/whispersend.git
+ git clone https://github.com/ankit0511/whispersend.git
  cd whispersend
  npm install
 ```
@@ -83,7 +83,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-For any queries or feedback, reach out at **your-email@example.com** or open an issue in the repository.
+For any queries or feedback, reach out at **ankit.patle.works.com** or open an issue in the repository.
 
 ---
 
