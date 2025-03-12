@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     await dbConnect()
 
     try {
-        const { userName, email, password } = await request.json
+        const { userName, email, password } = await request.json();
         const existingUserVerifyByEmail = await UserModel.findOne({
             userName,
             isVerified: true
@@ -35,6 +35,7 @@ export async function POST(request: Request) {
                 }, { status: 400 })
             }
             else {
+                console.log(password);
                 const hasedPassword = await bcrypt.hash(password, 10);
                 existingUserByEmail.password = hasedPassword;
                 existingUserByEmail.verifyCode = verifyCode;
