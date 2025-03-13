@@ -41,10 +41,7 @@ export async function POST(request: Request) {
                 message: "Please Enter Correct Code"
             }, { status: 400 });
         }
-
-
-
-
+        
     } catch (error) {
         console.log("Error While Verifyong  Email ", error)
         return Response.json({
