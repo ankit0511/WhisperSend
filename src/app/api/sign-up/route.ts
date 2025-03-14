@@ -77,7 +77,7 @@ export async function POST(request: Request) {
         return Response.json({
             success: true,
             message: "Account Created Successfully Verify Your email To Continue"
-        }, { status: 400 })
+        }, { status: 200 })
     } catch (error) {
         console.log("error while regestring user", error);
         return Response.json(
