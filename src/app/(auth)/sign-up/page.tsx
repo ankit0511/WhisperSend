@@ -13,7 +13,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Loader2 as Loader } from 'lucide-react';
-
+import * as z from "zod"
 const SigninPage = () => {
     const [userName, setUserName] = useState('');
     const [userNameMessage, setUserNameMessage] = useState("");
@@ -58,6 +58,7 @@ const SigninPage = () => {
             console.log("the response coming from the backend",response);
                 toast("Success", {
                     description: response.data.message,
+                    style: { color: 'black' },
                 });
             router.replace(`/verify-email/${userName}`);
         } catch (error) {
@@ -66,6 +67,7 @@ const SigninPage = () => {
             const errorMessage = axiosError.response?.data.message || "Something went wrong";
             toast('Something Went Wrong While Signup', {
                 description: errorMessage,
+                style: { color: 'red' },
             });
         } finally {
             setIsFormSubmitting(false);
